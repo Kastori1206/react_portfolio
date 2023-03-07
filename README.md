@@ -72,3 +72,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ```
 yarn add react-icons styled-components scrollreveal
 ```
+
+https://www.youtube.com/watch?v=3aCoZudPEKE
