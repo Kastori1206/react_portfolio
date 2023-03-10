@@ -3,7 +3,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: var(--z-fiexed);
+  z-index: var(--z-fixed);
   background-color: var(--body-color);
 }
 
@@ -35,6 +35,7 @@
   font-weight: var(--font-medium);
   transition: 0.3s;
 }
+
 .nav__icon,
 .nav__close,
 .nav__toggle {
@@ -45,6 +46,11 @@
 .active-link,
 .nav__link:hover {
   color: var(--title-color-dark);
+}
+
+/* Change background header */
+.scroll-header {
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* === breakpoints === */
