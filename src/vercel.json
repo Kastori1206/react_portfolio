@@ -1,3 +1,13 @@
 {
-  "rewrites": [{ "source": "/v1/(.*)", "destination": "/v1" }]
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "access-control-allow-origin",
+          "value": "*"
+        }
+      ]
+    }
+  ]
 }
