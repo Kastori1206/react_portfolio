@@ -4,21 +4,14 @@ export default function Social() {
   return (
     <div className="home__social">
       <a
-        href="https://www.instagram.com/"
+        href="https://kastori.tistory.com/"
         className="home__social-icon"
         target="__blank"
       >
-        <i className="uil uil-instagram"></i>
+        <i class="uil uil-blogger-alt"></i>
       </a>
       <a
-        href="https://dribble.com/"
-        className="home__social-icon"
-        target="__blank"
-      >
-        <i className="uil uil-dribbble"></i>
-      </a>
-      <a
-        href="https://github.com/"
+        href="https://github.com/kastori1206/"
         className="home__social-icon"
         target="__blank"
       >
