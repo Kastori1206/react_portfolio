@@ -8,6 +8,7 @@ import Skills from "./components/skills/Skills";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/Footer/Footer";
 import ScrollUp from "./components/scrollup/ScrollUp";
+import Portfolio from "./components/portfolio/Portfolio";
 
 export default function App() {
   return (
@@ -18,7 +19,8 @@ export default function App() {
         <Home />
         <About />
         <Skills />
-        <Services />
+        {/* <Services /> */}
+        <Portfolio />
         <Contact />
       </main>
       <Footer />
