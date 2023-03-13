@@ -1,6 +1,8 @@
 import React, { useRef } from "react";
 import emailjs from "emailjs-com";
 import "./contact.css";
+import { SERVICE_ID, TEMPLATE_ID, PUBLICKEY } from "../../config";
+import { RiKakaoTalkFill } from "react-icons/ri";
 
 export default function Contact() {
   const form = useRef();
@@ -9,13 +11,14 @@ export default function Contact() {
     e.preventDefault();
 
     emailjs.sendForm(
-      `${process.env.REACT_APP_SERVICE_ID}`,
-      `${process.env.REACT_APP_TEMPLATE_ID}`,
+      `${SERVICE_ID}`,
+      `${TEMPLATE_ID}`,
       form.current,
-      `${process.env.REACT_APP_PUBLICKEY}`
+      `${PUBLICKEY}`
     );
     e.target.reset();
   };
+
   return (
     <section className="contact section" id="contact">
       <h2 className="section__title">Contact Me</h2>
@@ -27,33 +30,22 @@ export default function Contact() {
 
           <div className="contact__info">
             <div className="contact__card">
-              <i className="bx bxl-mail-send contact__card-icon"></i>
+              <i className="bx bx-mail-send contact__card-icon"></i>
+
               <h3 className="contact__card-title">Email</h3>
-              <span className="contact__card-data">test@test.com</span>
+              <span className="contact__card-data">kastori1990@gmail.com</span>
 
               <a
-                href="mailto:examplemail@gmail.com.com"
+                href="mailto:kastori1990@gmail.com"
                 className="contact__button"
               >
                 Write me
                 <i className="bx bx-right-arrow-alt contact__button-icon"></i>
               </a>
             </div>
-            <div className="contact__card">
-              <i className="bx bxl-whatsapp contact__card-icon"></i>
-              <h3 className="contact__card-title">Whatsapp</h3>
-              <span className="contact__card-data">000-0000-0000</span>
 
-              <a
-                href="https://api.whatsapp.com/send?phone=62214408789&text=Hello, more information!"
-                className="contact__button"
-              >
-                Write me
-                <i className="bx bx-right-arrow-alt contact__button-icon"></i>
-              </a>
-            </div>
             <div className="contact__card">
-              <i className="bx bxl-messenger contact__card-icon"></i>
+              <RiKakaoTalkFill size="32" />
               <h3 className="contact__card-title">Messenger</h3>
               <span className="contact__card-data">test</span>
 
@@ -100,7 +92,7 @@ export default function Contact() {
             <button className="button button--flex">
               Send Message
               <svg
-                class="button__icon"
+                className="button__icon"
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"

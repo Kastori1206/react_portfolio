@@ -4,15 +4,20 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer__container container">
-        <h1 className="footer__title">Smith</h1>
+        <h1 className="footer__title">김영민</h1>
         <ul className="footer__list">
           <li>
-            <a href="#!" className="footer__link">
+            <a href="#about" className="footer__link">
               About
             </a>
           </li>
           <li>
-            <a href="#!" className="footer__link">
+            <a href="#skills" className="footer__link">
+              skills
+            </a>
+          </li>
+          <li>
+            <a href="#portfolio" className="footer__link">
               Projects
             </a>
           </li>
