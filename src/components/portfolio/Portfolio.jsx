@@ -15,7 +15,7 @@ export default function Portfolio() {
   const [projects, setProjects] = useState([]);
 
   const fetchData = async () => {
-    const res = await fetch("/api", { method: POST });
+    const res = await fetch("/api", { method: "POST" });
 
     setProjects(await res.json());
   };
