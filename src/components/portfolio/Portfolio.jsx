@@ -11,31 +11,11 @@ import "swiper/css/pagination";
 // import required modules
 import { Pagination } from "swiper";
 
-import { TOKEN, DATABASE_ID } from "../../config";
-
 export default function Portfolio() {
   const [projects, setProjects] = useState([]);
 
-  const options = {
-    method: "POST",
-    headers: {
-      accept: "application/json",
-      "Notion-Version": "2022-06-28",
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${TOKEN}`,
-    },
-    body: JSON.stringify({
-      sorts: [
-        {
-          property: "WorkPeriod",
-          direction: "descending",
-        },
-      ],
-    }),
-  };
-
   const fetchData = async () => {
-    const res = await fetch(`v1/databases/${DATABASE_ID}/query`, options);
+    const res = await fetch("/api", { method: POST });
 
     setProjects(await res.json());
   };
