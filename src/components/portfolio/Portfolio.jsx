@@ -35,10 +35,7 @@ export default function Portfolio() {
   };
 
   const fetchData = async () => {
-    const res = await fetch(
-      `https://api.notion.com/v1/databases/${DATABASE_ID}/query`,
-      options
-    );
+    const res = await fetch(`v1/databases/${DATABASE_ID}/query`, options);
 
     setProjects(await res.json());
   };
